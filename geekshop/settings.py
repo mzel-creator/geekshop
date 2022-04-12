@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = (
-    "django-insecure-la3^(6u!n!42^ve7c$e*lwb%o#yn0)75oka5k3zk*6v2q5ee@*"
+    "django-insecure-rx_k1!jii8h^n9z!%t+8sz@9$@n@piwm4tku&a$*++uk#vr^y&"
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -89,7 +89,7 @@ DATABASES = {
 
 
 # Password validation
-# https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
+# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
 if not DEBUG:
     AUTH_PASSWORD_VALIDATORS = [
