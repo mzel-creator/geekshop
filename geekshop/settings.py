@@ -57,7 +57,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "geekshop.urls"
 
-TTEMPLATES = [
+TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [],
