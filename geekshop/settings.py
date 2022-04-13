@@ -89,7 +89,6 @@ DATABASES = {
 
 
 # Password validation
-# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
 if not DEBUG:
     AUTH_PASSWORD_VALIDATORS = [
@@ -109,7 +108,6 @@ if not DEBUG:
 else:
     # Set simple password for debug
     AUTH_PASSWORD_VALIDATORS = []
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
