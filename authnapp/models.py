@@ -18,3 +18,4 @@ class ShopUser(AbstractUser):
             return False
         else:
             return True
+            
