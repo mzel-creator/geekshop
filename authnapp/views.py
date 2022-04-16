@@ -1,11 +1,13 @@
 from django.conf import settings
 from django.contrib import auth
 from django.core.mail import send_mail
+
 from django.db import transaction
 from django.shortcuts import HttpResponseRedirect, render
 from django.urls import reverse
 
 from authnapp.forms import ShopUserEditForm, ShopUserLoginForm, ShopUserProfileEditForm, ShopUserRegisterForm
+
 from authnapp.models import ShopUser
 
 
@@ -100,6 +102,7 @@ def verify(request, email, activation_key):
             user.is_active = True
             user.save()
             auth.login(request, user, backend="django.contrib.auth.backends.ModelBackend")
+
 
             return render(request, "authnapp/verification.html")
         print(f"error activation user: {user}")
