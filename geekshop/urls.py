@@ -3,7 +3,6 @@ from django.conf.urls import include
 from django.conf.urls.static import static
 from django.urls import path, re_path
 
-
 import mainapp.views as mainapp
 
 urlpatterns = [
