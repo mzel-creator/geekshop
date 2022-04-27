@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db import transaction
 from django.db.models.signals import pre_delete, pre_save
 from django.dispatch import receiver
@@ -12,7 +13,7 @@ from ordersapp.forms import OrderItemForm
 from ordersapp.models import Order, OrderItem
 
 
-class OrderList(ListView):
+class OrderList(LoginRequiredMixin, ListView):
     model = Order
 
     def get_queryset(self):
@@ -122,6 +123,7 @@ def order_forming_complete(request, pk):
 
     return HttpResponseRedirect(reverse("ordersapp:orders_list"))
 
+
 from django.http import JsonResponse
 
 from mainapp.models import Product
@@ -134,6 +136,7 @@ def get_product_price(request, pk):
             return JsonResponse({"price": product.price})
         else:
             return JsonResponse({"price": 0})
+
 
 @receiver(pre_save, sender=OrderItem)
 @receiver(pre_save, sender=Basket)
