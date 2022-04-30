@@ -3,6 +3,7 @@
 
 import datetime
 
+
 from django.db import migrations, models
 from django.utils.timezone import utc
 
@@ -10,9 +11,7 @@ from django.utils.timezone import utc
 class Migration(migrations.Migration):
 
     dependencies = [
-
         ("authnapp", "0006_alter_shopuser_activation_key_expires"),
-
     ]
 
     operations = [
