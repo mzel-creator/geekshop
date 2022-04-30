@@ -207,13 +207,6 @@ if DEBUG:
     )
 
 
-if DEBUG:
-    MIDDLEWARE.extend(
-        [
-            "debug_toolbar.middleware.DebugToolbarMiddleware",
-        ]
-    )
-
 # Debgu tool bar settings
 if DEBUG:
 
